@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <!--/*--><!--@thymesVar id="carList" type="List<web.model.Car>"--><!--*/-->
+    <!--/*--><!--@thymesVar id="car" type="web.model.Car"--><!--*/-->
+    <table border="1px">
+        <th:block th:each="car : ${carList}">
+            <tr>
+                <th><h1 th:text="${car.getName()}"></h1></th>
+                <th><h1 th:text="${car.getColour()}"></h1></th>
+                <th><h1 th:text="${car.getMileage()}"></h1></th>
+            </tr>
+        </th:block>
+    </table>
+</div>
+</body>
+</html>
